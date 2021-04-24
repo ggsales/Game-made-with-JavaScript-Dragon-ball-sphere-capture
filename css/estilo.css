@@ -1,3 +1,13 @@
+body{
+    background-image: url(../imagens/bg.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    height: 190px;
+
+}
+
+
 .esfera1 {
     width: 50px;
     height: 50px;
@@ -16,4 +26,25 @@
 
 .ladoB{
    transform: scaleX(-1); 
+}
+
+.painel {
+    position: absolute;
+    width: 310px;
+    padding: 5px;
+    left: 0px;
+    bottom: 0px;
+    border-top: solid 1px #fff;
+    background-color: #fff;
+    opacity: 0.8;
+}
+
+.vidas{
+    float: left;
+}
+
+.cronometro{
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
 }
