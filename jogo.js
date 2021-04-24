@@ -11,6 +11,14 @@ ajustaTamanhoPalcoJogo()
 
 function posicaoRandomica() {
 
+
+    //remover esfera anterior
+    if(document.getElementById('esfera')) {
+        document.getElementById('esfera').remove()
+    }
+    
+
+
     var posicaoX = Math.floor(Math.random() * largura) - 90
     var posicaoY = Math.floor(Math.random() * altura) - 90
 
@@ -22,14 +30,14 @@ function posicaoRandomica() {
     //cria elemento html
     var esfera = document.createElement('img')
     esfera.src = 'imagens/esfera.png'
-    esfera.className = tamanhoAleatorio()
+    esfera.className = tamanhoAleatorio() + ' ' + ladoAletorio()
     esfera.style.left = posicaoX + 'px'
     esfera.style.top = posicaoY + 'px'
     esfera.style.position = 'absolute'
+    esfera.id = 'esfera'
 
     document.body.appendChild(esfera)
 
-    tamanhoAleatorio()
 }
 
 
@@ -45,5 +53,19 @@ function tamanhoAleatorio() {
         case 2:
             return 'esfera3'
     }
-    console.log(classe)
+
+}
+
+function ladoAletorio(){
+    var classe = Math.floor(Math.random() * 2)
+
+
+    switch(classe){
+        case 0:
+            return 'ladoA'
+        case 1:
+            return 'ladoB'
+    }
+
+
 }
