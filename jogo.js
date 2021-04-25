@@ -3,6 +3,22 @@ var largura = 0
 var vidas = 1
 var tempo = 15
 
+var criaTempoEsfera = 1500
+
+var nivel = window.location.search
+nivel = nivel.replace('?' , '')
+
+if(nivel === 'normal') {
+    //1500
+    criaTempoEsfera = 1500
+}else if( nivel === 'dificil') {
+        //1000
+        criaTempoEsfera = 1000
+} else if (nivel === 'maisdeoitomil') {
+    //750
+    criaTempoEsfera = 750
+}
+
 function ajustaTamanhoPalcoJogo(){
      altura = window.innerHeight
      largura = window.innerWidth
