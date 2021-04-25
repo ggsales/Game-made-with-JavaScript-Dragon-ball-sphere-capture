@@ -1,3 +1,8 @@
+html{
+    cursor: url(../imagens/goku1.png) 30 30, auto;
+}
+
+
 body{
     background-image: url(../imagens/bg.png);
     background-repeat: no-repeat;
@@ -47,4 +52,15 @@ body{
     float: left;
     font-size: 20px;
     font-weight: bold;
+}
+
+.img-index{
+    width: 35%;
+}
+
+.img-loser{
+    width: 45%;
+}
+.img-win{
+    width: 45%;
 }
