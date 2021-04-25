@@ -8,26 +8,29 @@
         <link rel="stylesheet"  href="css/estilo.css" />
         <title>Dragon Ball Sphere Game</title>
     </head>
+   
     <body onresize="ajustaTamanhoPalcoJogo()">
-        
+         
         <div class="painel">
             <div class="vidas">
-                <img src="imagens/esfera-vazia.png" />
-                <img src="imagens/esfera-cheia.png" />
-                <img src="imagens/esfera-cheia.png" />
+                <img id="v1" src="imagens/esfera-cheia.png" />
+                <img  id="v2" src="imagens/esfera-cheia.png" />
+                <img  id="v3" src="imagens/esfera-cheia.png" />
 
             </div>
 
-            <div class="cronometro">Tempo restante: ?</div>
+            <div class="cronometro">Tempo restante: <span id="cronometro"></span> </div>
         </div>
 
         
 
 
         <script>
-            setInterval(function(){
+            document.getElementById('cronometro').innerHTML = tempo
+    
+            var criaEsfera = setInterval(function(){
                 posicaoRandomica()
-            }, 1000)
+            }, 2000)
         </script>
     </body>
 </html>

@@ -1,5 +1,7 @@
 var altura = 0 
 var largura = 0 
+var vidas = 1
+var tempo = 15
 
 function ajustaTamanhoPalcoJogo(){
      altura = window.innerHeight
@@ -8,6 +10,18 @@ function ajustaTamanhoPalcoJogo(){
     console.log(largura, altura)
 }
 ajustaTamanhoPalcoJogo()
+var cronometro = setInterval(function() {
+
+    tempo -=1
+    if(tempo < 0) {
+        clearInterval(cronometro)
+        clearInterval(criaEsfera)
+        window.location.href = 'vitoria.html'
+    } else {
+    document.getElementById('cronometro').innerHTML = tempo
+    }
+    
+}, 1000)
 
 function posicaoRandomica() {
 
@@ -15,6 +29,14 @@ function posicaoRandomica() {
     //remover esfera anterior
     if(document.getElementById('esfera')) {
         document.getElementById('esfera').remove()
+
+        if(vidas > 3){
+            window.location.href = 'fim-de-jogo.html'
+        } else {
+            document.getElementById('v' + vidas).src="imagens/esfera-vazia.png"
+
+            vidas++
+        }
     }
     
 
@@ -35,6 +57,9 @@ function posicaoRandomica() {
     esfera.style.top = posicaoY + 'px'
     esfera.style.position = 'absolute'
     esfera.id = 'esfera'
+    esfera.onclick = function() {
+        this.remove()
+    } 
 
     document.body.appendChild(esfera)
 
