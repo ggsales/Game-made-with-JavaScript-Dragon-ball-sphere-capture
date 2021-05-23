@@ -16,7 +16,7 @@ if(nivel === 'normal') {
         criaTempoEsfera = 1000
 } else if (nivel === 'maisdeoitomil') {
     //750
-    criaTempoEsfera = 750
+    criaTempoEsfera = 850
 }
 
 function ajustaTamanhoPalcoJogo(){

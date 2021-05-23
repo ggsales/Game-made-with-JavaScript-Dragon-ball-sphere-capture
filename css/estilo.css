@@ -5,10 +5,9 @@ html{
 
 body{
     background-image: url(../imagens/bg.png);
+    width: 100%;
     background-repeat: no-repeat;
-    background-size:cover;
-    background-position: center;
-    height: 190px;
+    background-size: cover;
 
 }
 
