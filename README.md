@@ -6,7 +6,7 @@ game com a temática do anime Dragon Ball Z, com  foco no uso do JavaScript para
 ### O propósito do jogo é simples, capturar as esferas que aparecerão na tela e não perder vidas. Após o nivel de jogo for escohido, o player é direcionado a tela do game, no qual a velocidade de renderização da esfera, vai de acordo com a dificuldade escolhida. A vitória vem caso a quantidade de vidas seja superior a 1, durante os 15 segundos, e a derrota caso o oposto disso ocorra.
 
 
-## Vitoria
+## Vitória
 
 https://user-images.githubusercontent.com/67559431/136139556-355eebbe-10b2-4e46-84d9-91f1d4f6f30f.mp4
 
