@@ -25,5 +25,5 @@ https://user-images.githubusercontent.com/67559431/136139626-7d272676-6bd1-4713-
 ## [Math](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math)
 <p>E graças ao objeto Math foi possivel criar as cordenadas de renderização de forma aleatória das esferas. Com o Math.Random era gerado um valor aleatório, que se multiplicado pelo valor das variaveis altura largura, ditas anteriormente, ja nos retorna um valor que se limita justamente  a elas. </p>
   
-##  [Dom](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction)
+##  [DOM](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction)
 <p>Com o número aleatório criado, era necessário apenas a manipulação do DOM para a criação de um novo elemento html img e associar o mesmo a esses numeros de acordo com as posições .</p>
