@@ -1,3 +1,4 @@
+
 var altura = 0 
 var largura = 0 
 var vidas = 1
@@ -19,15 +20,16 @@ if(nivel === 'normal') {
     criaTempoEsfera = 850
 }
 
-function ajustaTamanhoPalcoJogo(){
+
+function ajustaTamanhoPalcoJogo(){    
      altura = window.innerHeight
      largura = window.innerWidth
         
     console.log(largura, altura)
 }
+
 ajustaTamanhoPalcoJogo()
 var cronometro = setInterval(function() {
-
     tempo -=1
     if(tempo < 0) {
         clearInterval(cronometro)
@@ -48,6 +50,7 @@ function posicaoRandomica() {
 
         if(vidas > 3){
             window.location.href = 'fim-de-jogo.html'
+            
         } else {
             document.getElementById('v' + vidas).src="imagens/esfera-vazia.png"
 
@@ -110,3 +113,4 @@ function ladoAletorio(){
 
 
 }
+

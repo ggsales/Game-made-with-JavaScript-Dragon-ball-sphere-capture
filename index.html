@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
+    <title>Dragon Ball Sphere Game</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <link rel="stylesheet" href="css/estilo.css">
 
     <script>
+            
+
         function iniciarJogo(){
             var nivel= document.getElementById('nivel').value
 
             if(nivel === ''){
                 alert('Selecione um nivel para começar o jogo')
                 return false
-            }
-                window.location.href ="app.html?" + nivel
+            }else{
+                window.location.href ="app.html?" + nivel 
+            }  
         }
+        function tocarMusica(){
+        document.getElementById("audio").play();
+    }
     </script>
 
     
 </head>
 <body>
-            <audio src="./sounds/dbz-sound.mp3" autoplay loop></audio>
+            <audio  id="audio" src="./sounds/dbz-sound.mp3" id="playAudio" autoplay loop preload="auto" >
+            </audio>
 
-
-        <div class="container">
+        <div class="app">
             <div class="row">
                 <div class="col">
                     <div class="d-flex justify-content-center">
@@ -54,16 +61,26 @@
             <div class="row">
                 <div class="col">
                     <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()">Iniciar Jogo</button>
+                        <button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo();">Iniciar Jogo</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center mt-5">
+                        <i class="fas fa-volume-up btn-sound" onclick="tocarMusica()"></i>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <p>habilitar som</p>
                     </div>
                 </div>
             </div>
 
 
+
+
         </div>
-
-
-
+        
 
 
 </body>
